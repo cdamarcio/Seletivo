@@ -1,9 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"></head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazzPSS | Portal de Seletivos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #2563eb; --bg: #f8fafc; --white: #ffffff; --text: #1e293b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        .navbar { background: var(--white); padding: 1.2rem 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 60px 0; text-align: center; border-radius: 0 0 40px 40px; }
+        .grid-editais { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; margin: 40px 0; }
+        .card { background: var(--white); border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.03); border-top: 5px solid var(--accent); display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .badge { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; background: #dcfce7; color: #15803d; }
+        .btn-primary { background: var(--accent); color: white; border: none; padding: 12px 22px; border-radius: 10px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; }
+        footer { text-align: center; padding: 40px 0; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
 <body>
-    <h1 style="color: blue;">Teste de Conexão - MazzPSS</h1>
-    <p>Se você está lendo isso, o site voltou a funcionar!</p>
-    <a href="admin.html">Ir para Admin</a>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Mazz<span>PSS</span></a>
+            <a href="admin.html" style="text-decoration:none; font-weight:600; color:var(--primary);">Acesso Admin</a>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h2>Seletivos Simplificados</h2>
+            <p>Conceição do Araguaia - Pará</p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="grid-editais">
+            <div class="card">
+                <span class="badge">Inscrições Abertas</span>
+                <h3>PSS 001/2026 - Engenheiro Civil</h3>
+                <p><strong>Vagas:</strong> 05 + CR | <strong>Salário:</strong> R$ 6.500,00</p>
+                <div style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.8rem; color:#64748b;">Até 25/02/2026</span>
+                    <a href="edital.html" class="btn-primary">Ver Detalhes</a>
+                </div>
+            </div>
+            <div class="card" style="border-top-color:#94a3b8; opacity:0.8;">
+                <span class="badge" style="background:#f1f5f9; color:#475569;">Encerrado</span>
+                <h3>PSS 010/2025 - Auxiliar Administrativo</h3>
+                <p><strong>Vagas:</strong> 10 | <strong>Salário:</strong> R$ 2.500,00</p>
+                <div style="margin-top:20px;">
+                    <a href="#" class="btn-primary" style="background:#94a3b8; display:block;">Ver Resultado</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>&copy; 2026 MazzPSS | Prefeitura de Conceição do Araguaia</footer>
 </body>
 </html>
